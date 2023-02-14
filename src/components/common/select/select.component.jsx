@@ -1,0 +1,78 @@
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import {
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  FormHelperText,
+} from '@material-ui/core';
+
+export default function SelectComponent({
+  onSelect,
+  helperText,
+  selectItems,
+  value = {},
+  label,
+  error,
+  ...props
+}) {
+  const [val, setVal] = useState({ name: 'Active', value: 'ACTIVE' });
+  const handleSelect = (e) => {
+    const selectValue = selectItems.filter(
+      (selectItem) => e.target.value === selectItem?.value,
+    )[0];
+    setVal(val);
+    onSelect(selectValue);
+  };
+
+  useEffect(() => { setVal(value); }, [value]);
+
+  return (
+    <FormControl error={error}>
+      <InputLabel shrink>
+        {label}
+      </InputLabel>
+      <Select
+        {...props}
+        value={val?.value}
+        onChange={handleSelect}
+        className={props.className}
+      >
+        {selectItems
+          && selectItems.length
+          && selectItems.map((selectItem) => (
+            <MenuItem key={selectItem.name} value={selectItem.value}>
+              {selectItem.name}
+            </MenuItem>
+          ))}
+      </Select>
+      <FormHelperText>{helperText}</FormHelperText>
+    </FormControl>
+  );
+}
+
+SelectComponent.defaultProps = {
+  helperText: '',
+  value: {
+    name: '',
+    value: '',
+  },
+  defaultValue: {
+    name: '',
+    value: '',
+  },
+  className: '',
+};
+
+SelectComponent.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  selectItems: PropTypes.array.isRequired,
+  value: PropTypes.object,
+  label: PropTypes.string.isRequired,
+  error: PropTypes.bool.isRequired,
+  helperText: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  defaultValue: PropTypes.object,
+  className: PropTypes.string,
+};
