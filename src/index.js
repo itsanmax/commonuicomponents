@@ -35,6 +35,6 @@
  };
  
  export default g;
- export { default as Input } from './input/input.component';
+ export { default as Input } from './components/common/input/input.component';
 //export { default as Select } from './select/select.component';
-export { default as User } from './user/user.component'; 
+export { default as User } from './components/common/user/user.component'; //  ./user/user.component 

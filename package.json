@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config config/webpack.prod.js",
-    "start": "webpack serve --mode development --config config/webpack.start.js --port 3000"
+    "start": "webpack serve --mode development --config config/webpack.start.js --port 3000",
+    "babelbuild": "babel src -d build",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "sandeep.guddu@gmail.com",
