@@ -19,6 +19,12 @@ npm link
 
 npm link @denui/denmark-ui-components
 
+## To run it as a storybook, run below commands and open http://localhost:6006/ in browser
+
+npm run storybook
+
+## References:
+
 https://itnext.io/how-to-package-your-react-component-for-distribution-via-npm-d32d4bf71b4f
 
 
