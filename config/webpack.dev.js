@@ -35,31 +35,49 @@ module.exports = {
     filename: "main.js",
     clean:  true
   },
-  devServer: {
-    static: {
-      directory: paths.build,
-    },
-    historyApiFallback: true,
-    host:'denmark.local',
-    port: 8082,
-    // open: { 
-    //   app: {
-    //     name: 'google-chrome',
-    //     arguments: ['--incognito', '--new-window'],
-    //   },
-    //   target:['?ssoToken=1aad0864722e4cb39ab0a702ccc221ce&baseUrl=https://qc10denmark.timesinternet.in']
-    // },
-    open:['?ssoToken=40f8e1247ab14f10bd2575bdfa5a09e7&baseUrl=https://qc10denmark.timesinternet.in'],
-    //hot:true,
-   // hot: 'only',
-    client: {
-      overlay: {
-        errors: true,
-        warnings: false
-      },
-      progress: false,
-    },
+  // devServer: {
+  //   static: {
+  //     directory: paths.build,
+  //   },
+  //   historyApiFallback: true,
+  //   host:'denmark.local',
+  //   port: 8082,
+  //   // open: { 
+  //   //   app: {
+  //   //     name: 'google-chrome',
+  //   //     arguments: ['--incognito', '--new-window'],
+  //   //   },
+  //   //   target:['?ssoToken=1aad0864722e4cb39ab0a702ccc221ce&baseUrl=https://qc10denmark.timesinternet.in']
+  //   // },
+  //   open:['?ssoToken=40f8e1247ab14f10bd2575bdfa5a09e7&baseUrl=https://qc10denmark.timesinternet.in'],
+  //   //hot:true,
+  //  // hot: 'only',
+  //   client: {
+  //     overlay: {
+  //       errors: true,
+  //       warnings: false
+  //     },
+  //     progress: false,
+  //   },
      
+  // },
+  devServer: {
+    historyApiFallback: true,
+    open: {
+      app: {
+        name: 'Google Chrome',
+        arguments: ['--disable-web-security']
+      }
+    },
+    hot: true,
+    client: {
+      progress: true,
+      reconnect: 5,
+    },
+    static: {
+      directory: path.join(__dirname, "../dist"),
+    },
+    port: 3000,
   },
   stats: {
     warnings: false,

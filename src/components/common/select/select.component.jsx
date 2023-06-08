@@ -1,12 +1,22 @@
+/**
+ * @author: sandeep.gupta1@timesinternet.in
+ * @desc: Common select component based on material UI. 
+ * TODO: It's under development
+ */
+
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  FormHelperText,
-} from '@material-ui/core';
+// import {
+//   Select,
+//   MenuItem,
+//   FormControl,
+//   InputLabel,
+//   FormHelperText,
+// } from '@material-ui/core';
+
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 export default function SelectComponent({
   onSelect,

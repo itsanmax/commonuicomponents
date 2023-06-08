@@ -60,27 +60,17 @@ module.exports = merge(common, {
   ].filter(Boolean),
   devServer: {
     historyApiFallback: true,
-    //contentBase: BUILD_DIR,
     open: {
       app: {
         name: 'Google Chrome',
         arguments: ['--disable-web-security']
       }
     },
-   // openPage: '?ssoToken=9b3590d1fe244cf19c56e8d0a404e8f7',
-   // writeToDisk: true,
-   // disableHostCheck: true,
-   // watchContentBase: true,
     hot: true,
     client: {
       progress: true,
       reconnect: 5,
     },
-
-    // watchOptions: {
-    //   ignored: /node_modules/,
-    // },
-    //progress: true,
     static: {
       directory: path.join(__dirname, "../dist"),
     },

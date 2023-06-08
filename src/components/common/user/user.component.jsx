@@ -1,4 +1,9 @@
 
+/**
+ * @author: sandeep.gupta1@timesinternet.in
+ * @desc: Common user component based on material UI
+ */
+
 import React from "react";
 import PropTypes from 'prop-types';
 

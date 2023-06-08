@@ -1,5 +1,10 @@
+/**
+ * @author: sandeep.gupta1@timesinternet.in
+ * @desc: Common input component based on material UI
+ */
+
 import React from 'react';
-import { TextField } from '@material-ui/core';
+import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
 
 /**

@@ -22,7 +22,7 @@ module.exports = merge(common, {
     path: BUILD_DIR,
     library: 'DenUIComponent',
     libraryTarget: 'umd',
-    publicPath: '',
+    publicPath: '/',
     clean: true
   },
   plugins: [
