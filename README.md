@@ -11,13 +11,17 @@ npm run start
 
 npm run build
 
-## To make available as a global node modules inside @denui/denmark-ui-components. It should be one time process.
+## To make available as a local global node modules inside @itsanmamx/react-ui-components. It should be one time process.
 
 npm link 
 
-## To use it inside any other project and will be available in your project node modules, run below command. It should be one time process.
+## To use it inside any other project via npm link and will be available in your project node modules, run below command. It should be one time process.
 
-npm link @denui/denmark-ui-components
+npm link @itsanmax/react-ui-components
+
+## To use via npm server, use below commands. It will be available in package.json:
+
+npm install @itsanmax/react-ui-components
 
 ## To run it as a storybook, run below commands and open http://localhost:6006/ in browser
 

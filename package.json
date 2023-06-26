@@ -1,9 +1,9 @@
 {
-  "name": "@denui/denmark-ui-components",
+  "name": "@itsanmax/react-ui-components",
   "version": "1.0.0",
   "private": false,
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config config/webpack.prod.js",
@@ -12,9 +12,19 @@
     "prepare": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files",
+    "prepublish": "rm -rf ./dist && npm run build"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsanmax/commonuicomponents"
+  },
+  "keywords": [
+    "Common ui components",
+    "UI components",
+    "React components",
+    "Re-usable UI components"
+  ],
   "author": "sandeep.guddu@gmail.com",
   "license": "ISC",
   "peerDependencies": {
