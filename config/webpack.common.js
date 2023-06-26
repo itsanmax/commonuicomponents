@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const devMode = process.env.NODE_ENV !== 'production';
 console.log("Build Mode : --", devMode ? 'development' : 'production')
 module.exports = {
-    entry: [paths.src + '/index.js'],
+    entry: [paths.src + '/index.tsx'],
     devtool: 'inline-source-map',
     resolve: {
         modules: ['node_modules'],

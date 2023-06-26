@@ -29,8 +29,9 @@ npm run storybook
 
 ## References:
 
-https://itnext.io/how-to-package-your-react-component-for-distribution-via-npm-d32d4bf71b4f
+https://medium.com/@abuduabiodunsulaiman/setup-react-app-with-webpack-ts-and-js-da80cf3b7278
 
+https://itnext.io/how-to-package-your-react-component-for-distribution-via-npm-d32d4bf71b4f
 
 https://www.pluralsight.com/guides/export-reactjs-components-as-node-modules-to-npm
 

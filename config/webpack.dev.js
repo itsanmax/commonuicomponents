@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
-  entry: [paths.src + '/index.js'],
+  entry: [paths.src + '/index.tsx'],
     resolve: {
         alias: {
           Env_Path: paths.src + "/environments/environment.dev"
