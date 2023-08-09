@@ -39,5 +39,11 @@ https://blog.bitsrc.io/sharing-react-components-across-multiple-applications-a40
 
 https://github.com/webpack/webpack-dev-middleware/issues/205
 
+https://www.freecodecamp.org/news/how-to-create-and-publish-your-first-npm-package/
+
+https://rossbulat.medium.com/publish-private-npm-packages-with-proxy-registry-verdaccio-56b769bca659
+
+
+
 
 
